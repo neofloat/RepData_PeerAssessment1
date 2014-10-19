@@ -1,5 +1,14 @@
 # Reproducible Research: Peer Assessment 1
+=======================Notes====================
 
+
+github repo with RMarkdown source code:https://github.com/neofloat/RepData_PeerAssessment1.git
+
+Preview of this html file:  http://htmlpreview.github.io/?https://github.com/neofloat/RepData_PeerAssessment1/blob/master/PA1_template.html
+
+Histogram is not barplot. More information can be found here: https://class.coursera.org/repdata-007/forum/thread?thread_id=1
+
+=======================Start====================
 
 ## Loading and preprocessing the data
 ### check the format of the data loaded
@@ -120,7 +129,9 @@ mm
 ## [1] 37.38
 ```
 
-**Solution:** The mean and median total number of steps taken per day are 37.3826 and 37.3785, respectively.
+**Solution:** 
+  The mean  total number of steps taken per day is 37.3826.
+  The median total number of steps taken per day is 37.3785.
 
 
 
@@ -148,7 +159,8 @@ max
 ## 104      835 206.2
 ```
 
-**Solution:** 835 interval contains the maximum number of steps on averge across all the days, which is 206.1698.
+**Solution:** 
+- interval 835 contains the maximum number of steps on averge across all the days, which is 206.1698.
 
 ## Imputing missing values
 1. Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)
@@ -192,7 +204,8 @@ hist(avgstepperday2$steps,main="Histogram of the total number of steps taken eac
 
 ```r
 #mean total number of steps taken per day
-mean(avgstepperday2$steps)
+ma2<-mean(avgstepperday2$steps)
+ma2
 ```
 
 ```
@@ -201,14 +214,18 @@ mean(avgstepperday2$steps)
 
 ```r
 #median total number of steps taken per day
-median(avgstepperday2$steps)
+mm2<-median(avgstepperday2$steps)
+mm2
 ```
 
 ```
 ## [1] 37.38
 ```
 
-**Solution:** There is no change on the mean and median total number of steps taken per day. However, the imputing missing data changes the histogram of the total number of steps taken each day. By replacing the missing value with the the mean for that 5-minute interval of all the days, the largest number of counts get increased.
+**Solution:**
+   The mean  total number of steps taken per day is 37.3826.
+   The median total number of steps taken per day is 37.3826.
+There is no change on the mean and median total number of steps taken per day. However, the imputing missing data changes the histogram of the total number of steps taken each day. By replacing the missing value with the the mean for that 5-minute interval of all the days, the largest number of counts get increased.
 
 
 
@@ -236,6 +253,10 @@ head(fulldata)
 
 
 ![plot example](instructions_fig/sample_panelplot.png)
+
+**Note:**
+The first plot is from the example, and the next plot is obtained from my data.
+
 
 
 3. Your plot will look different from the one above because you will be using the activity monitor data. Note that the above plot was made using the lattice system but you can make the same version of the plot using any plotting system you choose.
@@ -298,4 +319,7 @@ xyplot(week$steps~week$interval |date, data = week, type ="l", layout=c(1,2), xl
 
 ![plot of chunk unnamed-chunk-12](./PA1_template_files/figure-html/unnamed-chunk-12.png) 
 
+**Solution:**
+This plot contains two panels. It shows the time series of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days.
 
+=======================End====================
