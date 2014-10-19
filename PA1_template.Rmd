@@ -150,7 +150,7 @@ head(fulldata)
 ![plot example](instructions_fig/sample_panelplot.png)
 
 **Note:**
-The first plot is from the example, and the next plot is obtained from my data.
+**This plot is from the course example, and the following plot is obtained from my data.**
 
 
 
